@@ -109,46 +109,46 @@ const ComingSoonPage = () => {
         />
       )}
       
-      <div className="max-w-4xl w-full  mt-12  text-center relative" style={{ zIndex: 10 }}>
+      <div className="w-full mt-20 text-center relative" style={{ zIndex: 10 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           ref={titleRef}
         >
-          <h1 className="text-5xl md:text-5xl font-bold text-white mt-12 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mt-8 sm:mt-12 tracking-tight">
             <span className="text-blue-200">Your </span> Conversations, Your Insights,
             <br />
             <span className="text-white">Your Growth.</span>
           </h1>
         </motion.div>
-  
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-2xl md:text-2xl text-blue-200 mt-2 tracking-wide">
-          Chatslytics analyze chats and emails, delivering tailored insights that make productivity effortless and business decisions smarter.
+          <p className="text-p sm:text-2xl text-blue-200 mt-2 sm:mt-4 tracking-wide">
+            Chatslytics analyze chats and emails, delivering tailored insights that make productivity effortless and business decisions smarter.
           </p>
         </motion.div>
-  
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="relative"
         >
-          <div className="flex flex-col items-center ">
-          <div className="bg-green-400/20 mt-5 px-4 py-2 rounded-full text-green-400 text-sm">
-            Coming Soon
-          </div>
-  
+          <div className="flex flex-col items-center">
+            <div className="bg-green-400/20 mt-5 px-4 py-2 rounded-full text-green-400 text-sm">
+              Coming Soon
+            </div>
+
             <div className="w-full max-w-md mt-8">
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex flex-col space-y-3">
-                  <p className="text-blue-200 text-xl font-medium mb-2">Join the Beta List</p>
-                  <div className="flex gap-3">
+                  <p className="text-blue-200 text-lg sm:text-xl font-medium mb-2">Join the Beta List</p>
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Input
                       type="email"
                       placeholder="Enter your email"
@@ -158,10 +158,10 @@ const ComingSoonPage = () => {
                       required
                       disabled={isLoading}
                     />
-                    <Button 
+                    <Button
                       type="submit"
                       disabled={isLoading}
-                      className="bg-blue-500 hover:bg-blue-600 text-white px-8 h-12 text-lg min-w-[120px]"
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-8 h-12 text-lg min-w-[120px] mt-3 sm:mt-0"
                     >
                       {isLoading ? (
                         <motion.div
@@ -176,7 +176,7 @@ const ComingSoonPage = () => {
                     </Button>
                   </div>
                 </div>
-                
+
                 {status === 'success' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
@@ -187,7 +187,7 @@ const ComingSoonPage = () => {
                     <span>You're on the list! We'll be in touch soon.</span>
                   </motion.div>
                 )}
-                
+
                 {status === 'error' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
